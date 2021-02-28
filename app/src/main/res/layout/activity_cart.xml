@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/cuisines_selected_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:text="Cuisines Selected"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"/>
+
+        <GridView
+            android:id="@+id/grid_cuisines_selected"
+            android:layout_below="@id/cuisines_selected_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:layout_marginTop="10dp"
+            android:numColumns="3"
+            android:verticalSpacing="5dp" />
+
+        <TextView
+            android:id="@+id/checkout_text"
+            android:layout_below="@id/grid_cuisines_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="Check Out"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_below="@id/checkout_text"
+            android:id="@+id/net_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Total:                                                     ₹"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"/>
+
+        <TextView
+            android:layout_below="@id/net_total_text"
+            android:id="@+id/cgst_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CGST:                                                           ₹"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"/>
+
+        <TextView
+            android:layout_below="@id/cgst_text"
+            android:id="@+id/sgst_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SGST:                                                           ₹"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"/>
+
+        <TextView
+            android:layout_below="@id/sgst_text"
+            android:id="@+id/grand_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grand Total:                                                ₹"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"/>
+
+        <TextView
+            android:id="@+id/net_total_price"
+            android:layout_toRightOf="@id/net_total_text"
+            android:layout_below="@id/checkout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/cgst_price"
+            android:layout_below="@id/net_total_price"
+            android:layout_toRightOf="@id/cgst_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/sgst_price"
+            android:layout_below="@id/cgst_price"
+            android:layout_toRightOf="@id/sgst_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/grand_total_price"
+            android:layout_below="@id/sgst_price"
+            android:layout_toRightOf="@id/grand_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="0"/>
+
+        <Button
+            android:id ="@+id/place_order"
+            android:layout_below="@id/grand_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  PLACE  ORDER  "
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_rounded_corners"
+            android:padding="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
